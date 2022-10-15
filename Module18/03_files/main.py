@@ -1,12 +1,12 @@
 file_name=input('Введите назвние: ')
 simbols=list('@№$%^&\*()')
 if file_name.endswith('.txt') or file_name.endswith('.docx'):
-    #print('Файл назван верно: ',file_name)
-    for i in range(len(simbols)):
-        if not file_name.startswith(simbols[i]):
+
+   # for i in range(len(simbols)):
+        if file_name[0] not in simbols:
             print('Файл назван верно: ', file_name)
         else:
             print('название начинается на один из специальных символов.')
-            break
+            #break
 else:
     print('неверное расширение файла. Ожидалось .txt или .docx.')
