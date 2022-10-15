@@ -1,26 +1,34 @@
 
-digits=0
-count=0
-while True:
-    password=input('Придумайте пароль: ')
+
+def is_good_len(password):
+    return len(password)
+
+
+def is_isnumeric(password):
+    digits = 0
     for i in password:
         if i.isnumeric():
-            digits+=1
+            digits += 1
+    return digits
+
+
+def is_isupper(password):
+    count = 0
+    for i in password:
         if i.isupper():
-            count+=1
+            count += 1
+    return count
 
-    if len(password)<8:
-        print('Пароль ненадёжный. Попробуйте ещё раз.')
-    elif digits<3:
-        print('Пароль ненадёжный. Попробуйте ещё раз.')
-    elif count<1:
-        print('Пароль ненадёжный. Попробуйте ещё раз.')
+
+
+while True:
+    password=input('Придумайте пароль: ')
+
+
+    if is_good_len(password)>8 and is_isnumeric(password)>=3 and is_isupper(password)>=1:
+         print('Это надёжный пароль!')
+         break
+
     else:
-        print('Это надёжный пароль!')
-        break
-
-
-
-
-
+        print('Пароль ненадёжный. Попробуйте ещё раз.')
 
