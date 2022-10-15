@@ -9,5 +9,14 @@ violator_songs = [
     ['Blue Dress', 4.29],
     ['Clean', 5.83]
 ]
+N=int(input('сколько песен? '))
+time=0
+for j in range(N):
+    song=input('введите название песни ')
 
-# TODO здесь писать код
+    for i in violator_songs:
+         if i[0]==song:
+             time+=i[1]
+
+print('общая длительност ',time)
+
