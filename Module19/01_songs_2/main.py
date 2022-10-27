@@ -10,4 +10,12 @@ violator_songs = {
     'Clean': 5.83
 }
 
-# TODO здесь писать код
+
+N=int(input('сколько песен? '))
+time=0
+for _ in range(N):
+    song=input('введите название песни ')
+   # print(violator_songs.get(song))
+    time+=violator_songs.get(song)
+print('общая длительност ',round(time,2))
+
